@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>emoji emoction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+      <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+  
+      <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <center>
+            <h3 class="btn btn-success heading"> app detector gestos de mão
+                <br>
+            </h3>
+            <p style = "font-size:22px;">fassa gestos com a mão
+                <br>
+                <b style = "color:yellow;">ok</b>
+                <br>
+                <b style = "color:rgb(34, 75, 253);">rock</b>
+                <br>
+                <b style = "color:rgb(238, 46, 46);">joia</b>
+                <br>
+            </p>
+
+            <div class="col-md-4 col-sm-10 col-xs-12">
+                <label>visualização da webcam</label>
+                <div id="camera"></div>
+                <br><br>
+                <button onclick="takeSnapshot()" class="btn btn-warning">capturar imagem</button>
+            </div>
+
+
+
+            <div class="col-md-4 col-sm-10 col-xs-12">
+                <label>foto:</label>
+                <div id="result"> </div>
+                <br><br>
+                <button onclick="check()" class="btn btn-success">capturar imagem</button>
+            </div>
+            <div>Teachable Machine Pose Model</div>
+<button type="button" onclick="init()">Start</button>
+<div><canvas id="canvas"></canvas></div>
+<div id="label-container"></div>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8/dist/teachablemachine-pose.min.js"></script>
+<script type="text/javascript">
+</script>
+
+        </center>
+        
+    </div>
+</body>
+</html>
